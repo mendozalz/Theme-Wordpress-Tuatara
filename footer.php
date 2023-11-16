@@ -36,7 +36,7 @@
                             $campo_btn = get_field('btn_enviar');
                             $campo_placeHolder = get_field('placeholder');
                             if($campo_btn && $campo_placeHolder){
-                            echo '<div class="input-group mb-3 w-30 mt-5">
+                            echo '<div class="input-group mb-3 w-30-stricto mt-5">
                             <input type="text" class="form-control rounded-start-pill ps-4" placeholder="' .$campo_placeHolder. '" aria-label="Recipients username" aria-describedby="button-addon2">
                             <button class="btn btn-outline-secondary rounded-pill ml-negativo text-light" type="button" id="button-addon2">'. $campo_btn . '</button>
                             </div>';
@@ -44,7 +44,7 @@
                             ?>
                     </div>
                     </div>
-                    <hr class="my-2">
+                    <hr class="my-3">
                     <div class="row">
                     <div class="col-md-6">
                         <!-- Texto "Tuatara Company" a la izquierda -->

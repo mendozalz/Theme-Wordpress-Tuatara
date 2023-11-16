@@ -7,7 +7,7 @@
             <div class="principal d-flex flex-column justify-content-center">
                 <div class="container container-principal">
                     <h1 class="text-light"><?php the_title(); ?></h1>
-                    <p class="text-light"><?php the_content(); ?></p>
+                    <p class="text-content"><?php the_content(); ?></p>
                     <?php
                     $campo_btn = get_field('btn_enviar');
                     $campo_placeHolder = get_field('placeholder');
@@ -31,7 +31,7 @@
                </div> 
             </section>
             <section class="terciaria d-flex align-items-center">
-                <div class="col-6 d-flex align-items-center justify-content-end h-100">
+                <div class="col-img-escritorio col-6 d-flex align-items-center justify-content-end h-100">
                     <img id="escritorio-tecnologia" src="https://i.ibb.co/PYPYYzz/ezgif-com-resize-2.gif" alt="escritorio y técnologia">
                 </div>
                 <div class="col-6 pe-extra">
@@ -91,7 +91,7 @@
                     </div>
                     </div>
                 </div>
-                <div class="slider-left col-8 h-100 d-flex flex-column justify-content-start">
+                <div class="slider-right col-8 h-100 d-flex flex-column justify-content-start">
                     <div id="carouselExampleCaptions" data-bs-ride="carousel"  class="carousel slide">
                         <div class="carousel-indicators">
                             <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
