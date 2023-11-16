@@ -1,0 +1,207 @@
+/*
+Theme Name: Tuatara
+Theme URI: https://tuatara.co/
+Description: Tema de desarrollo de pruebas para test tuatara
+Author: Lenin Mendoza
+Author URI: https://mendozalz.vercel.app/
+Version: 1.0
+License: MIT
+License URI: https://www.mit.edu/~amini/LICENSE.md
+Tags: Test de prueba técnica
+Screenshot: https://i.blogs.es/09b647/googlefotos/1366_2000.webp
+*/
+
+.main{
+    height: 75vh;
+    background-color: #7205A0;
+}
+.principal {
+    height: calc(65vh) ;
+    background-image: url("https://i.ibb.co/QJ8NSFS/banner-home.gif");
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: right;
+    margin-top: -95px;
+}
+
+.container-principal h1{
+    width: 300px;
+}
+#navbarSupportedContent{
+    flex-grow: 0;
+}
+#el-nido{
+    filter: invert(93%) sepia(0%) saturate(0%) hue-rotate(266deg) brightness(105%) contrast(108%);  
+}
+
+section.secundaria{
+    margin-top: -5.7% !important;
+    margin-bottom: -4.8% !important;
+    position: relative;
+    z-index: 9;
+}
+
+section.terciaria{
+    background-color: #00E2E7;
+    height: 80vh;
+}
+section.cuarta{
+    background-color: #00E2E7;
+    height: 60vh;
+}
+section.quinta{
+    background-color: #00E2E7;
+    height: 55vh;
+}
+
+#escritorio-tecnologia{
+    margin-right: 50px !important;
+}
+.pe-extra {
+    padding-right: 20% !important;
+}
+.w-40{
+    width: 40% !important;
+}
+.w-30{
+    width: 35%;
+}
+.w-20{
+    width: 20% !important;
+}
+.ml-negativo {
+    margin-left: -15px !important;
+    background-color: #fc2879 !important;
+    border:none !important;
+    width: 45%;
+  }
+.h-40{
+    height: 40%;
+}
+.h-30{
+    height: 30%;
+}
+.h-20{
+    height: 20%;
+}
+.w-tuatara{
+    width: 35%;
+}
+/*acordion tercera seccion*/
+span.badge{
+    background-color: #203845 !important;
+}
+button.accordion-button {
+    background: transparent !important;
+}
+.accordion-item {
+    background: transparent !important;
+    border:none !important;
+    border-bottom: 1px solid #203845 !important;
+    box-shadow: none !important;
+    border-radius: 0 !important;
+}
+.accordion-item:last-child{
+    border-bottom: none ! important;
+}
+.accordion-button:not(.collapsed) {
+    box-shadow: none !important;
+}
+.badge-container{
+    margin-bottom: 25px;
+}
+.accordion-body {
+    padding-top: 0 !important;
+}
+button.accordion-button.collapsed {
+    color: #ffffff;
+}
+.accordion-header b{
+    font-size: 18px !important;
+}
+/*  */
+
+/* Carrusel de Imagene */
+img.d-block.w-100 {
+    width: 40% !important;
+    margin: auto;
+}
+
+.glassmorphismo{
+    width: 600px;
+    height: 250px !important;
+    margin-top: 12%;
+    background: rgba(255, 255, 255, 0.5) !important;
+    backdrop-filter: blur(50px) !important;
+    border-radius: 25px;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    border: 1px solid white !important;
+    gap: 24px;
+    border: none !important;
+}
+.carousel-caption{
+    width: 300px;
+    height: 120px !important;
+    margin-bottom: 30px;
+    background: rgba(255, 255, 255, 0.3) !important;
+    backdrop-filter: blur(50px) !important;
+    border-radius: 25px;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    border: 1px solid white !important;
+    gap: 24px;
+    border: none !important;
+}
+/*  */
+
+/* Formulario */
+
+.img-descansando{
+    width: 70% !important;
+    margin-left: 70px;
+}
+form.formulario{
+    padding-right: 30%;
+}
+.form-control.form-contact{
+    background-color: transparent !important;
+    border: none !important;
+    border-bottom: 1px solid #203845 !important;
+    border-radius: 0 !important;
+    padding-left: 0;
+    margin-bottom: 15px;
+}
+/*  */
+
+/* Footer */
+.footer{
+    height: 50vh;
+}
+#logo-el-nido{
+    width: 25%;
+}
+.fs-arbitario{
+    font-size: 14px !important;
+}
+.col-md-6.redes{
+    text-align: right;
+}
+.logo-redes{
+    width: 4%;
+    margin: 0 3px;
+}
+.logo-redes.behance{
+    width: 4.5% !important;
+}
+/*  */
+@media (min-width:600px) and (max-width:1140px) {
+    .principal {
+        background-position: center;
+        background-size: cover;
+    }
+}
