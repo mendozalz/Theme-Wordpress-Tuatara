@@ -30,8 +30,10 @@
                         </div>
                         <div class="col-md-3 w-40">
                             <!-- Cuarta columna -->
-                            <img id="logo-el-nido" src="/wp-content/themes/Tuatara-dev/assets/logo-nido.png" alt="logo el nido">
-                            <p class="mt-4 fs-arbitario">Good Relations are the base of our success. There is no better testimonial that our clients, newly friends.</p>
+                            <div class="tablet">
+                                <img id="logo-el-nido" src="/wp-content/themes/Tuatara-dev/assets/logo-nido.png" alt="logo el nido">
+                                <p class="mt-4 fs-arbitario">Good Relations are the base of our success. There is no better testimonial that our clients, newly friends.</p>
+                            </div>
                             <?php
                             $campo_btn = get_field('btn_enviar');
                             $campo_placeHolder = get_field('placeholder');

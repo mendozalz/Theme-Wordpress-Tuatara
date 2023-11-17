@@ -132,7 +132,7 @@
                     </div>
                 </div>
             </section>
-            <section class="quinta formulario fluid d-flex">
+            <section id="contact" class="quinta formulario fluid d-flex">
                     <div class="col-5">
                         <img class="img-descansando" src="/wp-content/uploads/2023/11/contacto-home.png" alt="sujeto descansando">
                     </div>
