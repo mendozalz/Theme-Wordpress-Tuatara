@@ -2,8 +2,8 @@
 
 <?php while (have_posts()) : the_post(); ?>
 
-    <main class="">
-        <section class="main">
+    <main class="main">
+        <section class="section-main">
             <div class="principal d-flex flex-column justify-content-center">
                 <div class="container container-principal">
                     <h1 class="text-light"><?php the_title(); ?></h1>
@@ -21,6 +21,7 @@
                 </div>
             </div>
             </section>
+            <!-- Sección secundaria -->
             <section class="secundaria container bg-white h-30 m-auto d-flex py-2 p-5">
                <div class="col-4 d-flex align-items-center">
                 <img class="w-tuatara" src="https://i.ibb.co/BjLtKMw/ezgif-com-resize.gif" alt="tuatara">
@@ -30,6 +31,9 @@
                 <p class="text-dark">Tuataras, New Zealand Reptiles inspire us with its behavior to breathe what we call Mutualism, a way of living, managing and relating with our beloved clients. Its goal is to harvest long-term relations where transparency, trust, and communication ends in a win-win.</p>
                </div> 
             </section>
+            <!-- Fin sección secundaria -->
+
+            <!-- Sección Terciaria -->
             <section class="terciaria d-flex align-items-center">
                 <div class="col-img-escritorio col-6 d-flex align-items-center justify-content-end h-100">
                     <img id="escritorio-tecnologia" src="https://i.ibb.co/PYPYYzz/ezgif-com-resize-2.gif" alt="escritorio y técnologia">
@@ -81,6 +85,9 @@
                 </div>
               </div>
             </section>
+            <!-- Fin sección Terciaria -->
+
+            <!-- Sección Cuarta -->
             <section class="cuarta carrusel fluid d-flex">
                 <div class="slider-left col-4 h-100 d-flex align-items-start">
                 <div class="card fluid glassmorphismo">
@@ -132,6 +139,9 @@
                     </div>
                 </div>
             </section>
+            <!-- Fin sección Cuarta -->
+
+             <!-- Sección Quinta -->
             <section id="contact" class="quinta formulario fluid d-flex">
                     <div class="col-5">
                         <img class="img-descansando" src="/wp-content/uploads/2023/11/contacto-home.png" alt="sujeto descansando">
@@ -152,6 +162,7 @@
                     </form>
                     </div>
             </section>
+             <!-- Fin sección Quinta -->
     </main>
 
 

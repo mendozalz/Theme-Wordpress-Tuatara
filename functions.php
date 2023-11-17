@@ -12,7 +12,7 @@ function mlz_tuatara(){
 add_action('wp_enqueue_scripts', 'mlz_tuatara');
 
 function adding_my_new_header() {
-    wp_enqueue_style( 'new_header', get_template_directory_uri() . '/css/style.css', '1.0' ); 
+    wp_enqueue_style( 'new_header', get_template_directory_uri() . '/css/main.css', '1.0' ); 
 }
 
 add_action( 'wp_enqueue_scripts', 'adding_my_new_header' );
