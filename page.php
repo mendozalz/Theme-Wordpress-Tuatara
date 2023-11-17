@@ -2,13 +2,13 @@
 
 <?php while (have_posts()) : the_post(); ?>
 
-    <main class="main">
-        <section class="section-main">
-            <div class="principal d-flex flex-column justify-content-center">
-                <div class="container container-principal">
-                    <h1 class="text-light"><?php the_title(); ?></h1>
-                    <p class="text-content"><?php the_content(); ?></p>
-                    <?php
+<main class="main">
+    <section class="section-main">
+        <div class="principal d-flex flex-column justify-content-center">
+            <div class="container container-principal">
+                <h1 class="text-light"><?php the_title(); ?></h1>
+                <p class="text-content"><?php the_content(); ?></p>
+                <?php
                     $campo_btn = get_field('btn_enviar');
                     $campo_placeHolder = get_field('placeholder');
                     if($campo_btn && $campo_placeHolder){
@@ -18,87 +18,161 @@
                     </div>';
                     }
                     ?>
-                </div>
             </div>
-            </section>
-            <!-- Sección secundaria -->
-            <section class="secundaria container bg-white h-30 m-auto d-flex py-2 p-5">
-               <div class="col-4 d-flex align-items-center">
-                <img class="w-tuatara" src="https://i.ibb.co/BjLtKMw/ezgif-com-resize.gif" alt="tuatara">
-                <h3 class="">ABOUT<br><span class="fw-light">TUATARA</span></h3>
-               </div>
-               <div class="col-8 d-flex align-items-center">
-                <p class="text-dark">Tuataras, New Zealand Reptiles inspire us with its behavior to breathe what we call Mutualism, a way of living, managing and relating with our beloved clients. Its goal is to harvest long-term relations where transparency, trust, and communication ends in a win-win.</p>
-               </div> 
-            </section>
-            <!-- Fin sección secundaria -->
-
-            <!-- Sección Terciaria -->
-            <section class="terciaria d-flex align-items-center">
-                <div class="col-img-escritorio col-6 d-flex align-items-center justify-content-end h-100">
-                    <img id="escritorio-tecnologia" src="https://i.ibb.co/PYPYYzz/ezgif-com-resize-2.gif" alt="escritorio y técnologia">
-                </div>
-                <div class="col-6 pe-extra">
-                <div class="accordion" id="accordionPanelsStayOpenExample">
+        </div>
+    </section>
+    <!-- Sección secundaria -->
+    <section class="secundaria container bg-white h-30 m-auto d-flex py-4 p-5">
+        <div class="col-3 d-flex align-items-center">
+            <?php 
+                    $imgTuatara = get_field('imagen_tuatara');
+                    $tituloBanner1 = get_field('titulo_banner_1');
+                    $tituloBanner2 = get_field('titulo_banner_2');
+                    if($imgTuatara && $tituloBanner1 && $tituloBanner2){
+                    echo  '<img class="w-tuatara" src="'. esc_url($imgTuatara) . '" alt="tuatara">
+                          <h3>'.$tituloBanner1.'<br><span class="fw-light">'.$tituloBanner2.'</span></h3>
+                    ';
+                    } 
+                    ?>
+        </div>
+        <div class="col-9 d-flex align-items-center">
+            <?php
+                    $description = get_field('descripcion');
+                    if($description){
+                    echo '
+                    <p class="text-dark">'.$description.'</p>
+                    ';
+                    }
+                    ?>
+        </div>
+    </section>
+    <!-- Fin sección secundaria -->
+    <!-- Sección Terciaria -->
+    <section class="terciaria d-flex align-items-center">
+        <div class="col-img-escritorio col-6 d-flex align-items-center justify-content-end h-100">
+            <?php
+                    $imagenEscritorio = get_field('imagen_escritorio'); 
+                    if($imagenEscritorio){
+                    echo '
+                    <img id="escritorio-tecnologia" src="'.esc_url($imagenEscritorio).'" alt="escritorio y técnologia">
+                    ';
+                    }
+                    ?>
+        </div>
+        <div class="col-6 pe-extra">
+            <div class="accordion" id="accordionPanelsStayOpenExample">
                 <div class="accordion-item">
                     <h2 class="accordion-header">
+                        <?php
+                    $sofwearTech = get_field('titulo_software');
+                    $sofwearTechDesciption = get_field('descripcion_1');                   
+                    if($sofwearTech && $sofwearTechDesciption){
+                    echo '
                     <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#panelsStayOpen-collapseOne" aria-expanded="false" aria-controls="panelsStayOpen-collapseOne">
-                    <b>Software & Tech </b>
+                    <b>'.$sofwearTech.'</b>
                     </button>
                     </h2>
                     <div id="panelsStayOpen-collapseOne" class="accordion-collapse collapse">
-                    <div class="accordion-body">
-                        At Tuatara we love technology and we are excited about the future. For this reason we focus on creating innovative solutions. Feel free to explore our projects and contact us if you have an idea you want to implement.
+                        <div class="accordion-body">
+                            '.$sofwearTechDesciption.'
+                        </div>
                     </div>
-                    </div>
+                    ';
+                    }
+                    ?>
                 </div>
                 <div class="accordion-item">
-                    <h2 class="accordion-header">
-                    <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#panelsStayOpen-collapseTwo" aria-expanded="true" aria-controls="panelsStayOpen-collapseTwo">
-                    <b>Pure Design</b> 
-                    </button>
-                    </h2>
-                    <div id="panelsStayOpen-collapseTwo" class="accordion-collapse collapse show">
-                    <div class="accordion-body">
-                    Design should evoke feelings, should play with our senses so we can reach a level where we can have thrilling and connected human experiences.
-                    </div>
-                    <div class="badge-container d-flex justify-content-evenly">
-                    <span class="w-20 badge rounded-pill">Branding</span>
-                    <span class="w-20 badge rounded-pill">Animation</span>
-                    <span class="w-20 badge rounded-pill">Character</span>
-                    <span class="w-20 badge rounded-pill">Printed</span>
-                    </div>
-                    </div>
+                    <?php
+                    $pureDesign = get_field('titulo_pure_desing');
+                    $pureDesignDesciption = get_field('descripcion_2');
+                    $badge1 = get_field('badge_1');
+                    $badge2 = get_field('badge_2');
+                    $badge3 = get_field('badge_3');
+                    $badge4 = get_field('badge_4');
+                    if ($pureDesign && $pureDesignDesciption) {
+                        echo '
+                        <h2 class="accordion-header">
+                            <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#panelsStayOpen-collapseTwo" aria-expanded="true" aria-controls="panelsStayOpen-collapseTwo">
+                                <b>' . $pureDesign . '</b>
+                            </button>
+                        </h2>
+                        <div id="panelsStayOpen-collapseTwo" class="accordion-collapse collapse show">
+                            <div class="accordion-body">
+                                ' . $pureDesignDesciption . '
+                            </div>
+                        </div>
+                        <div class="badge-container d-flex justify-content-evenly">
+                            <span class="w-20 badge rounded-pill">'.$badge1.'</span>
+                            <span class="w-20 badge rounded-pill">'.$badge2.'</span>
+                            <span class="w-20 badge rounded-pill">'.$badge3.'</span>
+                            <span class="w-20 badge rounded-pill">'.$badge4.'</span>
+                        </div>
+                        ';
+                    }
+                    ?>
                 </div>
+
                 <div class="accordion-item">
                     <h2 class="accordion-header">
+                        <?php
+                    $marketing = get_field('titulo_marketing');
+                    $marketingDesciption = get_field('descripcion_3');                   
+                    if($marketing && $marketingDesciption){
+                    echo '
                     <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#panelsStayOpen-collapseThree" aria-expanded="false" aria-controls="panelsStayOpen-collapseThree">
-                    <b>Marketing</b> 
+                    <b>'.$marketing.'</b> 
                     </button>
                     </h2>
                     <div id="panelsStayOpen-collapseThree" class="accordion-collapse collapse">
-                    <div class="accordion-body">
-                    We combine our expertise in design and technology to create unique marketing experiences that connect with your clients and increase your sales.
+                        <div class="accordion-body">
+                    '.$marketingDesciption.'
+                        </div>
                     </div>
-                    </div>
+                    ';
+                    }
+                    ?>
                 </div>
-                </div>
-              </div>
-            </section>
-            <!-- Fin sección Terciaria -->
+    </section>
+    <!-- Fin sección Terciaria -->
 
-            <!-- Sección Cuarta -->
-            <section class="cuarta carrusel fluid d-flex">
-                <div class="slider-left col-4 h-100 d-flex align-items-start">
-                <div class="card fluid glassmorphismo">
-                    <div class="card-body">
-                        <h4 class="card-title">Our Portfolio</h5>
-                        <h6 class="card-subtitle mb-2 text-body-secondary">PURE DESING</h6>
-                        <p class="card-text">Lorem Ipsum es simplemente el texto de relleno de las imprentas y archivos de texto. Lorem Ipsum ha sido el texto de relleno estándar de las industrias desde el año 1500</p>
-                    </div>
-                    </div>
-                </div>
-                <div class="slider-right col-8 h-100 d-flex flex-column justify-content-start">
+    <!-- Sección Cuarta -->
+    <section class="cuarta carrusel fluid d-flex">
+        <div class="slider-left col-4 h-100 d-flex align-items-start">
+            <div class="card fluid glassmorphismo">
+                <?php
+                    $ourPortafolio = get_field('titulo_4');
+                    $subTitulo = get_field('sub-titulo');
+                    $description4 = get_field('descripcion_4');
+                    if($ourPortafolio && $subTitulo && $description4){
+                    echo '  <div class="card-body">
+                            <h4 class="card-title">'.$ourPortafolio.'</h5>
+                            <h6 class="card-subtitle mb-2 text-body-secondary">'.$subTitulo.'</h6>
+                            <p class="card-text">'.$description4.'</p>
+                            </div>
+                </div>';
+
+                    }
+                    ?>
+            </div>
+            <?php 
+                    $slider1 = get_field('slider_imagen_1');
+                    $tituloSlider1 = get_field('titulo_imagen_1');
+                    $descriptionSlider1 = get_field('descripcion_imagen_1');
+
+                    $slider2 = get_field('slider_imagen_2');
+                    $tituloSlider2 = get_field('titulo_imagen_2');
+                    $descriptionSlider2 = get_field('descripcion_imagen_2');
+                    
+                    $slider3 = get_field('slider_imagen_3');
+                    $tituloSlider3 = get_field('titulo_imagen_3');
+                    $descriptionSlider3 = get_field('descripcion_imagen_3');
+                    if(
+                        $slider1 && $tituloSlider1 && $descriptionSlider1 &&
+                        $slider2 && $tituloSlider2 && $descriptionSlider2 &&
+                        $slider3 && $tituloSlider3 && $descriptionSlider3
+                        ){
+                    echo '
+                    <div class="slider-right col-8 h-100 d-flex flex-column justify-content-start">
                     <div id="carouselExampleCaptions" data-bs-ride="carousel"  class="carousel slide">
                         <div class="carousel-indicators">
                             <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
@@ -107,24 +181,24 @@
                         </div>
                         <div class="carousel-inner">
                             <div class="carousel-item active">
-                            <img src="/wp-content/uploads/2023/11/Proyect-3-movil.png" class="d-block w-100" alt="...">
+                            <img src="'.$slider1.'" class="d-block w-100" alt="...">
                             <div class="carousel-caption d-none d-md-block">
-                                <h5 class="text-dark">Hack Americas</h5>
-                                <p class="text-dark">texto de relleno de las imprentas y archivos de texto.</p>
+                                <h5 class="text-dark">'.$tituloSlider1.'</h5>
+                                <p class="text-dark">'.$descriptionSlider1.'</p>
                             </div>
                             </div>
                             <div class="carousel-item">
-                            <img src="/wp-content/uploads/2023/11/Proyect-4-movil.png" class="d-block w-100" alt="...">
+                            <img src="'.$slider2.'" class="d-block w-100" alt="...">
                             <div class="carousel-caption d-none d-md-block">
-                                <h5 class="text-dark">Helitours Malta</h5>
-                                <p class="text-dark">texto de relleno de las imprentas y archivos de texto.</p>
+                                <h5 class="text-dark">'.$tituloSlider2.'</h5>
+                                <p class="text-dark">'.$descriptionSlider2.'</p>
                             </div>
                             </div>
                             <div class="carousel-item">
-                            <img src="/wp-content/uploads/2023/11/Proyect-5-movil.png" class="d-block w-100" alt="...">
+                            <img src="'.$slider3.'" class="d-block w-100" alt="...">
                             <div class="carousel-caption d-none d-md-block">
-                                <h5 class="text-dark">Bix</h5>
-                                <p class="text-dark">texto de relleno de las imprentas y archivos de texto.</p>
+                                <h5 class="text-dark">'.$tituloSlider2.'</h5>
+                                <p class="text-dark">'.$descriptionSlider3.'</p>
                             </div>
                             </div>
                         </div>
@@ -138,32 +212,51 @@
                         </button>
                     </div>
                 </div>
-            </section>
-            <!-- Fin sección Cuarta -->
+                    ';
+                    }
+                ?>
+    </section>
+    <!-- Fin sección Cuarta -->
 
-             <!-- Sección Quinta -->
-            <section id="contact" class="quinta formulario fluid d-flex">
+    <!-- Sección Quinta -->
+    <section id="contact" class="quinta formulario fluid d-flex">
+        <?php 
+                $imagenFormulario = get_field('imagen_5');
+                $tituloFormulario = get_field('titulo_5');
+                $subTituloFormulario = get_field('sub-titulo_5');
+                $placeHolderNombre = get_field('place_holder_nombre');
+                $placeHolderEmail = get_field('place_holder_email');
+                $placeHolderPhone = get_field('place_holder_phone');
+                $placeHolderObservacion = get_field('place_holder_observacion');
+                $btnContact = get_field('btn_contact');
+                if(
+                    $imagenFormulario && $tituloFormulario && $subTituloFormulario && $placeHolderNombre && $placeHolderEmail && $placeHolderPhone && $placeHolderObservacion
+                    ){
+                    echo '
                     <div class="col-5">
-                        <img class="img-descansando" src="/wp-content/uploads/2023/11/contacto-home.png" alt="sujeto descansando">
+                    <img class="img-descansando" src="'.$imagenFormulario.'" alt="sujeto descansando">
                     </div>
                     <div class="col-7">
                     <form class="formulario">
                         <fieldset>
-                            <h2><b>CONTACT</b> <span class="fw-light">US</span></h2>
-                            <h6>LET´S TALK</h6>
+                            <h2><b>'.$tituloFormulario.'</b> <span class="fw-light">US</span></h2>
+                            <h6>'.$subTituloFormulario.'</h6>
                             <div class="mb-3 mt-4">
-                            <input type="text" class="form-control form-contact" placeholder="Name">
-                            <input type="email" class="form-control form-contact" placeholder="Email">
-                            <input type="tel" class="form-control form-contact" placeholder="Phone">
-                            <input type="text" class="form-control form-contact" placeholder="What's on your mind?">
+                            <input type="text" class="form-control form-contact" placeholder="'.$placeHolderNombre.'">
+                            <input type="email" class="form-control form-contact" placeholder="'.$placeHolderEmail.'">
+                            <input type="tel" class="form-control form-contact" placeholder="'.$placeHolderPhone.'">
+                            <input type="text" class="form-control form-contact" placeholder="'.$placeHolderObservacion.'">
                             </div>
-                            <div class="btn-container fluid d-flex justify-content-end mt-5"><button id="btn_submit" type="submit" class="btn btn-primary rounded-pill px-5 bg-white text-dark border-0"><b>CONTACT</b></button></div>
+                            <div class="btn-container fluid d-flex justify-content-end mt-5"><button id="btn_submit" type="submit" class="btn btn-primary rounded-pill px-5 bg-white text-dark border-0"><b>'.$btnContact.'</b></button></div>
                         </fieldset>
                     </form>
                     </div>
-            </section>
-             <!-- Fin sección Quinta -->
-    </main>
+                    ';
+                }
+                ?>
+    </section>
+    <!-- Fin sección Quinta -->
+</main>
 
 
 <?php endwhile; ?>
