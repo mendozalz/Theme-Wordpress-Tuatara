@@ -34,25 +34,7 @@
                                 <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                             </div>
                             <!-- Enlaces del menú en el modal -->
-                            <ul class="navbar-nav me-auto mb-2 mb-lg-0">
-                                <li class="nav-item px-4">
-                                    <a class="nav-link active text-light" aria-current="page" href="#">Full Services</a>
-                                </li>
-                                <li class="nav-item px-4">
-                                    <a class="nav-link text-light" href="#">World wide</a>
-                                </li>
-                                <li class="nav-item px-4">
-                                    <a class="nav-link text-light" aria-disabled="true"><img id="el-nido"
-                                            src="/wp-content/themes/Tuatara-dev/assets/logo-nido.png" alt="nido" width="auto"
-                                            height="30"></a>
-                                </li>
-                                <li class="nav-item px-4">
-                                    <a id="a-contact" class="nav-link text-light" href="#contact">Contact</a>
-                                </li>
-                                <li class="nav-item px-4">
-                                    <a class="idiomas nav-link text-light" href="#">ES | EN</a>
-                                </li>
-                            </ul>
+                            <?php wp_nav_menu(array('menu' => 'Primary', 'menu_class' => 'navbar-nav me-auto mb-2 mb-lg-0', 'container' => '', 'walker' => new Tuatara_Nav() )); ?>
                         </div>
                     </div>
                 </div>
@@ -63,25 +45,7 @@
 
             <!-- Menú de navegación -->
             <div class="collapse navbar-collapse" id="navbarNav">
-                <ul class="navbar-nav me-auto mb-2 mb-lg-0">
-                    <li class="nav-item px-4">
-                        <a class="nav-link active text-light" aria-current="page" href="#">Full Services</a>
-                    </li>
-                    <li class="nav-item px-4">
-                        <a class="nav-link text-light" href="#">World wide</a>
-                    </li>
-                    <li class="nav-item px-4">
-                        <a class="nav-link text-light" aria-disabled="true"><img id="el-nido"
-                                src="/wp-content/themes/Tuatara-dev/assets/logo-nido.png" alt="nido" width="auto"
-                                height="30"></a>
-                    </li>
-                    <li class="nav-item px-4">
-                        <a class="nav-link text-light" href="#">Contact</a>
-                    </li>
-                    <li class="nav-item px-4">
-                        <a class="nav-link text-light" href="#">ES | EN</a>
-                    </li>
-                </ul>
+            <?php wp_nav_menu(array('menu' => 'Primary', 'menu_class' => 'navbar-nav me-auto mb-2 mb-lg-0', 'container' => '', 'walker' => new Tuatara_Nav() )); ?>
             </div>
         </div>
     </nav>

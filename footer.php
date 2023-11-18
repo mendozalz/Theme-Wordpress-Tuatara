@@ -130,4 +130,5 @@
 <!-- scripts de WP -->
 <?php wp_footer(); ?>
 </body>
+
 </html>

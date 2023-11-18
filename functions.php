@@ -1,7 +1,8 @@
 <?php 
 
 
-// registrar estilos
+require get_template_directory() . '/includes/walker-menu.php';
+
 function mlz_tuatara(){
 
     wp_register_script('script', get_stylesheet_directory_uri(). '/js/main.js', array('jquery'), '1', true );
@@ -16,6 +17,12 @@ function adding_my_new_header() {
 }
 
 add_action( 'wp_enqueue_scripts', 'adding_my_new_header' );
+
+function registrandoMenu(){
+	register_nav_menus(array('Primary' => 'menu Header'));
+}
+
+add_action('after_setup_theme','registrandoMenu');
 
    // registrar Bootstrap CSS
 function bootstrap_css() {
