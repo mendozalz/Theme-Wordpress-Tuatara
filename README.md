@@ -1,15 +1,17 @@
 # Tuatara Theme + ACF
 
-Prueba técnica para la empresa Tuatara en la creación de un tema hecho para Wordpress fuese totalmente editable todo su contenido exentuando colorres de fondo.
+Prueba técnica para la empresa Tuatara en la creación de un tema hecho para Wordpress fuese totalmente editable todo su contenido exceptuando colores de fondo.
+
 
 ## Features:
 
 - Uso ACF
 - Edición menú
-- Edición Titulo, subtitulos, parafos e imagenes
-- Diseño responsive Tablet / Movil
+- Edición Titulo, subtitulos, párrafos e imágenes
+- Diseño responsive Tablet / Móvil
 - Implementación Bootstrap
-- Adaptación modal bootstrap a menu movil
+- Adaptación modal bootstrap a menu móvil
+
 
 <hr>
 
