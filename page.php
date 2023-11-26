@@ -48,7 +48,7 @@
     </section>
     <!-- Fin sección secundaria -->
     <!-- Sección Terciaria -->
-    <section class="terciaria d-flex align-items-center">
+    <section id="fullservice" class="terciaria d-flex align-items-center">
         <div class="col-img-escritorio col-6 d-flex align-items-center justify-content-end h-100">
             <?php
                     $imagenEscritorio = get_field('imagen_escritorio'); 
@@ -136,7 +136,7 @@
     <!-- Fin sección Terciaria -->
 
     <!-- Sección Cuarta -->
-    <section class="cuarta carrusel fluid d-flex">
+    <section id="worldwide" class="cuarta carrusel fluid d-flex">
         <div class="slider-left col-4 h-100 d-flex align-items-start">
             <div class="card fluid glassmorphismo">
                 <?php
@@ -237,15 +237,15 @@
                     <img class="img-descansando" src="'.$imagenFormulario.'" alt="sujeto descansando">
                     </div>
                     <div class="col-7">
-                    <form class="formulario">
+                    <form id="formulario" class="formulario">
                         <fieldset>
                             <h2><b>'.$tituloFormulario.'</b> <span class="fw-light">US</span></h2>
                             <h6>'.$subTituloFormulario.'</h6>
                             <div class="mb-3 mt-4">
-                            <input type="text" class="form-control form-contact" placeholder="'.$placeHolderNombre.'">
-                            <input type="email" class="form-control form-contact" placeholder="'.$placeHolderEmail.'">
-                            <input type="tel" class="form-control form-contact" placeholder="'.$placeHolderPhone.'">
-                            <input type="text" class="form-control form-contact" placeholder="'.$placeHolderObservacion.'">
+                            <input id="form-name" type="text" class="form-control form-contact" placeholder="'.$placeHolderNombre.'">
+                            <input id="form-email" type="email" class="form-control form-contact" placeholder="'.$placeHolderEmail.'">
+                            <input id="form-phone" type="tel" class="form-control form-contact" placeholder="'.$placeHolderPhone.'">
+                            <input id="form-obsevacion" type="text" class="form-control form-contact" placeholder="'.$placeHolderObservacion.'">
                             </div>
                             <div class="btn-container fluid d-flex justify-content-end mt-5"><button id="btn_submit" type="submit" class="btn btn-primary rounded-pill px-5 bg-white text-dark border-0"><b>'.$btnContact.'</b></button></div>
                         </fieldset>

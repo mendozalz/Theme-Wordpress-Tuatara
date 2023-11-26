@@ -1,4 +1,4 @@
-<footer class="footer bg-white text-dark d-flex align-items-center">
+<footer id="nido" class="footer bg-white text-dark d-flex align-items-center">
     <?php
     $col_1 = get_field('titulo_columna_1');
     $campo1 = get_field('campo_1');
@@ -130,4 +130,5 @@
 <!-- scripts de WP -->
 <?php wp_footer(); ?>
 </body>
+
 </html>
